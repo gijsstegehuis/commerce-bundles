@@ -116,8 +116,15 @@ class Bundle extends Purchasable
     {
         return $this->title;
     }
-    
-    
+
+    /**
+     * @inheritdoc
+     * @since 3.3.0
+     */
+    public static function gqlTypeNameByContext(mixed $context): string
+    {
+        return 'Bundle';
+    }
 
     /**
      * @inheritdoc
